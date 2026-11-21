@@ -1,0 +1,150 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint"
+    content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+    <title>Omnifile - Universal File Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app-container">
+    <!--Sidebar-->
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">0</span>
+            <h2>Omnifile</h2>
+</div>
+
+<nav>
+    <p class="nav-heading">WORKSPACE</p>
+    <button class="nav-item active" data-section="home">
+        <span>⌂</span> Home
+    </button>
+
+    <button class="nav-item" data-section="images">
+        <span>▧</span> Images
+    </button>
+
+    <button class="nav-item" data-section="archives">
+        <span>▣</span> Archives
+    </button>
+
+    <button class="nav-item" data-section="disk">
+        <span>◈</span> Disk Images
+    </button>
+
+    <p class="nav-heading">LIBRARY</p>
+
+    <button class="nav-item" data-section="recent">
+         <span>◷</span> Recent Files
+    </button>
+
+    <button class="nav-item" data-section="settings">
+        <span>⚙</span> Settings
+    </button>
+</nav>
+
+<div class="sidebar-footer">
+    <span>OmniFile v0.1.0</span>
+    <span>Universal File Viewer</span>
+</div>
+
+</aside>
+
+<!-- Main content -->
+
+ <main class="main-content">
+    <header class="topbar">
+        <div>
+            <h1 id="page-title">Welcome to OmniFile</h1>
+            <p>Manage and preview your files in one place.</p>
+        </div>
+
+        <button class="open-button" id="open-file">
+            + Open Fields
+        </button>
+    </header>
+
+    <!-- File selection -->
+
+<section class="upload-section">
+        <div class="upload-icon">!</div>
+        <h2>Open your files</h2>
+        <p>Select ZIP, RAR, JPG, PNG, GIF or CHD files.</p>
+
+    <button class="primary-button" id="select-files">
+        Browse Files
+    </button>
+
+    <input type="file" id="file-input"
+    multiple
+    accept=".zip,.rar,.cbz,.jpg,.jpeg,.png,.gif,.chd"
+    hidden
+    />
+</section>
+
+<!-- Statistics -->
+
+ <section class="stats">
+    <div class="stat-card">
+        <stan>Selected Files</stan>
+        <h2 id="file-count">0</h2>
+    </div>
+
+    <div class="stat-card">
+        <span>Images</span>
+        <h2 id="image-count">0</h2>
+    </div>
+
+    <div class="stat-card">
+        <span>Archives</span>
+        <h2 id="archives-count">0</h2>
+    </div>
+</section>
+
+<!-- File list -->
+
+ <section class="files-section">
+    <div class="section-header">
+        <div>
+            <h2 id="list-title">Your Files</h2>
+            <p>Files selected during this session</p>
+        </div>
+
+        <button id="clear-files" class="clear-button">
+            Clear All
+        </button>
+    </div>
+
+    <div id="file-list" class="file-grid">
+        <div class="emply-state">
+            <div></div>
+            <h3>No files selected</h3>
+            <p>Your selected files will appear here.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Image preview -->
+ 
+<section id="preview-section" class="preview-section" hidden>
+    <div class="section-header">
+        <h2>Image Preview</h2>
+        <button id="close-preview">Close</button>
+    </div>
+
+             <img id="image-preview" alt="Selected image preview">
+             <p id="preview-name"></p>
+        </section>
+    </main>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+
+
